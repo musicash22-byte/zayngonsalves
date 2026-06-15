@@ -1,57 +1,519 @@
-<!-- HERO SECTION -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zayn Gonsalves | Live Singer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#D4AF37;
+--bg:#0b0b0b;
+--card:#171717;
+--text:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:white;
+line-height:1.7;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),
+rgba(0,0,0,.75)),
+url('images/hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:700;
+letter-spacing:3px;
+}
+
+.hero h2{
+font-size:28px;
+color:var(--gold);
+font-weight:400;
+margin:15px 0;
+}
+
+.hero p{
+font-size:18px;
+max-width:650px;
+margin:auto;
+opacity:.9;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--gold);
+color:black;
+}
+
+.btn-outline{
+border:1px solid var(--gold);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* GENERAL */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:38px;
+color:var(--gold);
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.contact-card{
+background:var(--card);
+padding:40px 30px;
+border-radius:20px;
+text-align:center;
+text-decoration:none;
+color:white;
+border:1px solid rgba(212,175,55,.15);
+transition:.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.contact-card .icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.contact-card h3{
+color:var(--gold);
+margin-bottom:10px;
+}
+
+/* VIDEO */
+
+.video-box{
+background:var(--card);
+padding:50px;
+border-radius:20px;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+/* SOCIAL */
+
+.social-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.social-card{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+text-align:center;
+text-decoration:none;
+color:white;
+}
+
+/* TIP */
+
+.tip-box{
+background:var(--card);
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:600px;
+margin:auto;
+}
+
+.tip-box img{
+width:250px;
+max-width:100%;
+margin:25px 0;
+border-radius:15px;
+}
+
+/* EVENTS */
+
+.events{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.event{
+background:var(--card);
+padding:20px;
+text-align:center;
+border-radius:15px;
+}
+
+/* FORM */
+
+form{
+max-width:700px;
+margin:auto;
+}
+
+input,
+textarea{
+width:100%;
+padding:16px;
+margin-bottom:15px;
+background:var(--card);
+border:1px solid #333;
+border-radius:10px;
+color:white;
+}
+
+button{
+width:100%;
+padding:16px;
+background:var(--gold);
+color:black;
+font-weight:700;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid #222;
+}
+
+footer p{
+opacity:.8;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-size:30px;
+color:white;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:20px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-wrapper">
-
-<!-- YOUR POSTER -->
-
-<div class="hero-image-container">
-
-<img
-src="images/hero.jpg"
-alt="Zayn Gonsalves"
-class="hero-image">
-
-</div>
-
-<!-- TEXT -->
-
 <div class="hero-content">
 
-<span class="badge">
-LIVE SINGER
-</span>
+<h1>ZAYN GONSALVES</h1>
 
-<h1>
-ZAYN GONSALVES
-</h1>
+<h2>🎤 LIVE SINGER</h2>
 
-<p class="hero-description">
-
+<p>
 Creating unforgettable experiences for weddings,
-private parties, pubs, clubs and corporate events.
-
+parties, pubs, clubs and corporate events.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#booking" class="btn-primary">
+<a href="#booking" class="btn btn-primary">
 BOOK NOW
 </a>
 
 <a href="https://wa.me/91XXXXXXXXXX"
-class="btn-secondary">
+class="btn btn-outline">
 WHATSAPP </a>
 
 <a href="#tip"
-class="btn-secondary">
+class="btn btn-outline">
 LEAVE A TIP </a>
 
 </div>
 
 </div>
 
+</section>
+
+<!-- CONTACT -->
+
+<section>
+
+<div class="section-title">
+<h2>CONTACT & BOOKINGS</h2>
+</div>
+
+<div class="contact-grid">
+
+<a href="tel:+91XXXXXXXXXX"
+class="contact-card">
+
+<div class="icon">📞</div>
+
+<h3>Call Me</h3>
+
+<p>Direct enquiries and bookings</p>
+
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX"
+class="contact-card">
+
+<div class="icon">💬</div>
+
+<h3>WhatsApp</h3>
+
+<p>Quick response and availability</p>
+
+</a>
+
+<a href="#booking"
+class="contact-card">
+
+<div class="icon">📅</div>
+
+<h3>Book An Event</h3>
+
+<p>Weddings, parties and corporate events</p>
+
+</a>
+
 </div>
 
 </section>
+
+<!-- VIDEO -->
+
+<section>
+
+<div class="section-title">
+<h2>WATCH ME LIVE</h2>
+</div>
+
+<div class="video-box">
+
+<h3>YouTube Section</h3>
+
+<p>
+Add your YouTube embed later.
+</p>
+
+</div>
+
+</section>
+
+<!-- SOCIAL -->
+
+<section>
+
+<div class="section-title">
+<h2>FOLLOW ME</h2>
+</div>
+
+<div class="social-grid">
+
+<a href="#" class="social-card">
+📸 Instagram
+</a>
+
+<a href="#" class="social-card">
+📘 Facebook
+</a>
+
+<a href="#" class="social-card">
+🎵 Spotify
+</a>
+
+</div>
+
+</section>
+
+<!-- TIP -->
+
+<section id="tip">
+
+<div class="section-title">
+<h2>❤️ ENJOYING THE MUSIC?</h2>
+</div>
+
+<div class="tip-box">
+
+<p>
+Scan to leave a tip
+</p>
+
+<img src="images/qr.png" alt="UPI QR">
+
+<p>
+UPI ID: yourupi@bank
+</p>
+
+</div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section>
+
+<div class="section-title">
+<h2>AVAILABLE FOR</h2>
+</div>
+
+<div class="events">
+
+<div class="event">🎉 Weddings</div>
+<div class="event">🥂 Engagements</div>
+<div class="event">🎂 Birthday Parties</div>
+<div class="event">🏢 Corporate Events</div>
+<div class="event">🎵 Pubs & Clubs</div>
+<div class="event">🎤 Private Events</div>
+<div class="event">🎪 Festivals</div>
+
+</div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section id="booking">
+
+<div class="section-title">
+<h2>BOOK YOUR EVENT</h2>
+</div>
+
+<form>
+
+<input type="text" placeholder="Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="date">
+
+<input type="text" placeholder="Location">
+
+<textarea rows="5"
+placeholder="Tell me about your event"></textarea>
+
+<button>
+SUBMIT BOOKING REQUEST
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h3>Zayn Gonsalves</h3>
+
+<p>Live Singer</p>
+
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX"
+class="whatsapp">
+💬 </a>
+
+</body>
+</html>
