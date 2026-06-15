@@ -4,11 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zayn Gonsalves | Live Singer & DJ</title>
+
+<title>Zayn Gonsalves | Live Singer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--gold:#D4AF37;
+--bg:#0b0b0b;
+--card:#171717;
+--text:#ffffff;
+}
 
 *{
 margin:0;
@@ -22,12 +30,9 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0b0b0b;
+background:var(--bg);
 color:white;
-}
-
-:root{
---gold:#d4af37;
+line-height:1.7;
 }
 
 /* HERO */
@@ -37,60 +42,62 @@ height:100vh;
 background:
 linear-gradient(rgba(0,0,0,.65),
 rgba(0,0,0,.75)),
-url('ChatGPT Image Jun 15, 2026, 09_11_42 PM.png');
+url('images/hero.jpg');
 background-size:cover;
 background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
 }
 
 .hero-content{
-max-width:800px;
+max-width:850px;
 }
 
 .hero h1{
-font-size:70px;
-letter-spacing:4px;
+font-size:72px;
+font-weight:700;
+letter-spacing:3px;
 }
 
 .hero h2{
+font-size:28px;
 color:var(--gold);
-margin:10px 0 20px;
 font-weight:400;
+margin:15px 0;
 }
 
 .hero p{
+font-size:18px;
 max-width:650px;
 margin:auto;
-line-height:1.8;
 opacity:.9;
 }
 
-.buttons{
+.hero-buttons{
 margin-top:35px;
 display:flex;
-justify-content:center;
 gap:15px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:14px 28px;
+padding:14px 30px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
 transition:.3s;
 }
 
-.primary{
+.btn-primary{
 background:var(--gold);
 color:black;
 }
 
-.secondary{
+.btn-outline{
 border:1px solid var(--gold);
 color:white;
 }
@@ -99,76 +106,114 @@ color:white;
 transform:translateY(-3px);
 }
 
-/* SECTION */
+/* GENERAL */
 
 section{
 padding:90px 8%;
 }
 
-.title{
+.section-title{
 text-align:center;
-color:var(--gold);
-margin-bottom:40px;
-font-size:35px;
+margin-bottom:50px;
 }
 
-/* CARDS */
+.section-title h2{
+font-size:38px;
+color:var(--gold);
+}
 
-.grid{
+/* CONTACT */
+
+.contact-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+gap:25px;
+max-width:1100px;
+margin:auto;
 }
 
-.card{
-background:#171717;
-padding:25px;
-border-radius:18px;
-}
-
-.card h3{
-margin-bottom:15px;
-color:var(--gold);
-}
-
-.card a{
-display:block;
-margin:10px 0;
+.contact-card{
+background:var(--card);
+padding:40px 30px;
+border-radius:20px;
+text-align:center;
 text-decoration:none;
 color:white;
+border:1px solid rgba(212,175,55,.15);
+transition:.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.contact-card .icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.contact-card h3{
+color:var(--gold);
+margin-bottom:10px;
 }
 
 /* VIDEO */
 
-.video-placeholder{
-background:#171717;
+.video-box{
+background:var(--card);
 padding:50px;
-border-radius:18px;
+border-radius:20px;
 text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+/* SOCIAL */
+
+.social-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.social-card{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+text-align:center;
+text-decoration:none;
+color:white;
 }
 
 /* TIP */
 
-.tip{
+.tip-box{
+background:var(--card);
+padding:40px;
+border-radius:20px;
 text-align:center;
+max-width:600px;
+margin:auto;
 }
 
-.tip img{
+.tip-box img{
 width:250px;
-margin-top:20px;
-border-radius:20px;
+max-width:100%;
+margin:25px 0;
+border-radius:15px;
 }
 
 /* EVENTS */
 
 .events{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .event{
-background:#171717;
+background:var(--card);
 padding:20px;
 text-align:center;
 border-radius:15px;
@@ -184,47 +229,52 @@ margin:auto;
 input,
 textarea{
 width:100%;
-padding:15px;
+padding:16px;
 margin-bottom:15px;
-background:#171717;
+background:var(--card);
 border:1px solid #333;
-color:white;
 border-radius:10px;
+color:white;
 }
 
 button{
 width:100%;
-padding:15px;
+padding:16px;
+background:var(--gold);
+color:black;
+font-weight:700;
 border:none;
 border-radius:10px;
-background:var(--gold);
-font-weight:700;
 cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-padding:40px;
 text-align:center;
+padding:40px;
 border-top:1px solid #222;
+}
+
+footer p{
+opacity:.8;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
 position:fixed;
-bottom:20px;
 right:20px;
+bottom:20px;
 width:65px;
 height:65px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
-font-size:28px;
+align-items:center;
 text-decoration:none;
+font-size:30px;
 color:white;
 }
 
@@ -238,6 +288,10 @@ font-size:42px;
 font-size:20px;
 }
 
+.hero p{
+font-size:16px;
+}
+
 }
 
 </style>
@@ -246,31 +300,33 @@ font-size:20px;
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
 
 <h1>ZAYN GONSALVES</h1>
 
-<h2>🎤 LIVE SINGER • DJ • ENTERTAINER</h2>
+<h2>🎤 LIVE SINGER</h2>
 
 <p>
 Creating unforgettable experiences for weddings,
 parties, pubs, clubs and corporate events.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a href="#booking" class="btn primary">
+<a href="#booking" class="btn btn-primary">
 BOOK NOW
 </a>
 
-<a href="https://wa.me/919110600679"
-class="btn secondary">
+<a href="https://wa.me/91XXXXXXXXXX"
+class="btn btn-outline">
 WHATSAPP </a>
 
 <a href="#tip"
-class="btn secondary">
+class="btn btn-outline">
 LEAVE A TIP </a>
 
 </div>
@@ -279,74 +335,114 @@ LEAVE A TIP </a>
 
 </section>
 
+<!-- CONTACT -->
+
 <section>
 
-<h2 class="title">
-CONTACT & BOOKINGS
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Contact</h3>
-
-<a href="tel:+91XXXXXXXXXX">
-📞 Call Me
-</a>
-
-  
-<a href="https://wa.me/919110600679">
-💬 WhatsApp
-</a>
-
+<div class="section-title">
+<h2>CONTACT & BOOKINGS</h2>
 </div>
 
-<div class="card">
+<div class="contact-grid">
 
-<h3>Follow Me</h3>
+<a href="tel:+91XXXXXXXXXX"
+class="contact-card">
 
-<a href="#">
-📸 Instagram
+<div class="icon">📞</div>
+
+<h3>Call Me</h3>
+
+<p>Direct enquiries and bookings</p>
+
 </a>
 
+<a href="https://wa.me/91XXXXXXXXXX"
+class="contact-card">
 
-</div>
+<div class="icon">💬</div>
+
+<h3>WhatsApp</h3>
+
+<p>Quick response and availability</p>
+
+</a>
+
+<a href="#booking"
+class="contact-card">
+
+<div class="icon">📅</div>
+
+<h3>Book An Event</h3>
+
+<p>Weddings, parties and corporate events</p>
+
+</a>
 
 </div>
 
 </section>
 
+<!-- VIDEO -->
+
 <section>
 
-<h2 class="title">
-WATCH MY LATEST PERFORMANCES
-</h2>
+<div class="section-title">
+<h2>WATCH ME LIVE</h2>
+</div>
 
-<div class="video-placeholder">
+<div class="video-box">
 
 <h3>YouTube Section</h3>
 
 <p>
-Add your YouTube embed code later.
+Add your YouTube embed later.
 </p>
 
 </div>
 
 </section>
 
+<!-- SOCIAL -->
+
+<section>
+
+<div class="section-title">
+<h2>FOLLOW ME</h2>
+</div>
+
+<div class="social-grid">
+
+<a href="#" class="social-card">
+📸 Instagram
+</a>
+
+<a href="#" class="social-card">
+📘 Facebook
+</a>
+
+<a href="#" class="social-card">
+🎵 Spotify
+</a>
+
+</div>
+
+</section>
+
+<!-- TIP -->
+
 <section id="tip">
 
-<h2 class="title">
-❤️ ENJOYING THE MUSIC?
-</h2>
+<div class="section-title">
+<h2>❤️ ENJOYING THE MUSIC?</h2>
+</div>
 
-<div class="tip">
+<div class="tip-box">
 
-<p>Scan to leave a tip</p>
+<p>
+Scan to leave a tip
+</p>
 
-<img src="images/qr.png"
-alt="UPI QR">
+<img src="images/qr.png" alt="UPI QR">
 
 <p>
 UPI ID: yourupi@bank
@@ -356,17 +452,19 @@ UPI ID: yourupi@bank
 
 </section>
 
+<!-- EVENTS -->
+
 <section>
 
-<h2 class="title">
-AVAILABLE FOR
-</h2>
+<div class="section-title">
+<h2>AVAILABLE FOR</h2>
+</div>
 
 <div class="events">
 
 <div class="event">🎉 Weddings</div>
 <div class="event">🥂 Engagements</div>
-<div class="event">🎂 Birthdays</div>
+<div class="event">🎂 Birthday Parties</div>
 <div class="event">🏢 Corporate Events</div>
 <div class="event">🎵 Pubs & Clubs</div>
 <div class="event">🎤 Private Events</div>
@@ -376,11 +474,13 @@ AVAILABLE FOR
 
 </section>
 
+<!-- BOOKING -->
+
 <section id="booking">
 
-<h2 class="title">
-BOOK YOUR EVENT
-</h2>
+<div class="section-title">
+<h2>BOOK YOUR EVENT</h2>
+</div>
 
 <form>
 
@@ -407,7 +507,7 @@ SUBMIT BOOKING REQUEST
 
 <h3>Zayn Gonsalves</h3>
 
-<p>Live Singer • DJ • Entertainer</p>
+<p>Live Singer</p>
 
 </footer>
 
